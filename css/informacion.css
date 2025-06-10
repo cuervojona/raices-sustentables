@@ -1,0 +1,131 @@
+section {
+    background-color: rgba(46, 125, 50, 0.08);
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+
+.row {
+    display: flex;
+    justify-content: center;
+    padding: 0 40px;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--green-primary) !important;
+}
+
+/* paleta de colores */
+.color-palette {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.color-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.color-square {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.color-label {
+    font-family: monospace;
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: bold;
+}
+
+.name-project,
+.slogan {
+    color: black;
+}
+
+.slogan {
+    font-style: italic;
+}
+
+
+body.dark-mode .color-label,
+body.dark-mode .name-project,
+body.dark-mode .slogan {
+    color: #ccc;
+}
+.carousel-inner img {
+    object-fit: cover;
+    height: 500px;
+  }
+
+/* Responsive Styles */
+@media screen and (max-width: 480px) {
+    section {
+        padding: 15px;
+    }
+
+    .name-project {
+        font-size: 20px;
+    }
+
+    .slogan {
+        font-size: 16px;
+    }
+
+    .color-palette {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .color-item {
+        margin-bottom: 10px;
+    }
+    .carousel-inner img {
+        height: 300px;
+      }
+}
+
+@media screen and (max-width: 768px) {
+    .row {
+        padding: 0 4px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .logo-preliminar {
+        max-width: 80px;
+    }
+
+    .carrusel {
+        aspect-ratio: 4 / 3;
+      }
+}
