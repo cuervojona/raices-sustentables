@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Raices Sustentables - Proyecto de sustentabilidad">
+    <title>Raices Sustentables</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/pagos.css">
+    <link rel="icon" href="img/icons8-árbol-48.png" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid px-4">
+                <a class="navbar-brand text-white text-decoration-none" href="./../index.html">
+                    <img src="img/icons8-árbol-48.png" alt="Logo" width="40" height="40" class="me-2">
+                    Raices Sustentables
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-4">
+                        <li class="nav-item px-3">
+                            <a class="nav-link" href="./../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link" href="informacion.html">Información</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link" href="pagos.html">Promociones</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false" id="darkModeToggle" aria-label="Cambiar tema de la página">
+                                    <img src="img/sun-fill.svg" alt="" width="20" height="20" style="filter: invert(1);"
+                                        aria-hidden="true">
+                                    <span class="visually-hidden">Tema actual</span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="darkModeToggle">
+                                    <li><button class="dropdown-item" data-theme="light">
+                                            <img src="img/sun-fill.svg" alt="" width="16" height="16" class="me-2"
+                                                aria-hidden="true">
+                                            <span>Modo Claro</span>
+                                        </button></li>
+                                    <li><button class="dropdown-item" data-theme="dark">
+                                            <img src="img/moon-stars-fill.svg" alt="" width="16" height="16"
+                                                class="me-2" aria-hidden="true">
+                                            <span>Modo Oscuro</span>
+                                        </button></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="promo-banner mb-4">
+            <p class="mb-1">3 Y 6 Cuotas Con Visa Y American Express</p>
+            <p class="mb-0">2X1 Con Club La Nación - Preventa Exclusiva Para Clientes BBVA</p>
+        </div>
+        <h2 class="mb-4 text-center">Entradas</h2>
+
+        <section id="tickets-section">
+            <div class="mb-3">
+                <label for="feria-cordoba" class="form-label visually-hidden">Feria Córdoba DD/MM/AA</label>
+                <div class="input-group-quantity">
+                    <label class="input-group-text">Feria Córdoba DD/MM/AA</label>
+                    <button class="btn btn-qty" type="button">-</button>
+                    <input type="text" class="form-control form-control-qty" value="0"
+                        aria-label="Cantidad Feria Córdoba" readonly>
+                    <button class="btn btn-qty" type="button">+</button>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="feria-buenos-aires" class="form-label visually-hidden">Feria Buenos Aires
+                    DD/MM/AA</label>
+                <div class="input-group-quantity">
+                    <label class="input-group-text">Feria Buenos Aires DD/MM/AA</label>
+                    <button class="btn btn-qty" type="button">-</button>
+                    <input type="text" class="form-control form-control-qty" value="0"
+                        aria-label="Cantidad Feria Buenos Aires" readonly>
+                    <button class="btn btn-qty" type="button">+</button>
+                </div>
+            </div>
+
+            <div class="mb-5">
+                <label for="feria-rosario" class="form-label visually-hidden">Feria Rosario DD/MM/AA</label>
+                <div class="input-group-quantity">
+                    <label class="input-group-text">Feria Rosario DD/MM/AA</label>
+                    <button class="btn btn-qty" type="button">-</button>
+                    <input type="text" class="form-control form-control-qty" value="0"
+                        aria-label="Cantidad Feria Rosario" readonly>
+                    <button class="btn btn-qty" type="button">+</button>
+                </div>
+            </div>
+            <div class="d-flex justify-content-end">
+                <button type="button" class="btn btn-continue" id="continueButton" disabled>Continuar</button>
+            </div>
+        </section>
+        
+        <section id="person-data" class="hidden row g-4 mb-4">
+            <h5>Ingrese sus datos:</h5>
+            <div class="user-data-section col-md-6">
+                <form class="was-validated">
+                    <div class="form-group-custom">
+                        <label for="validationInput">Email:</label>
+                        <input type="email" class="form-control" id="emailPerson" placeholder="usuario@dominio.com"
+                            required />
+                        <div class="invalid-feedback">
+                            Ingrese un correo electrónico válido. Ej: usuario@dominio.com
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group-custom col-md-6">
+                            <label for="validationInput" class="form-label">Nombre:</label>
+                            <input class="form-control" id="namePerson" placeholder="nombre" required />
+                            <div class="invalid-feedback">
+                                Ingrese su nombre.
+                            </div>
+                        </div>
+                        <div class="form-group-custom col-md-6">
+                            <label for="validationInput" class="form-label">Apellido:</label>
+                            <input class="form-control" id="surNamePerson" placeholder="apellido" required />
+                            <div class="invalid-feedback">
+                                Ingrese su apellido.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group-custom">
+                        <label for="validationInput" class="form-label">Dirección:</label>
+                        <input class="form-control" id="addressPerson" placeholder="Calle, número, ciudad" required />
+                        <div class="invalid-feedback">
+                            Complete su dirección.
+                        </div>
+                    </div>
+                    <div class="form-group-custom">
+                        <label for="validationInput">Medio De Pago:</label>
+                        <select class="form-control payment-method-select" id="methodPaidPerson" required>
+                            <option value="">Seleccione Metodo De Pago</option>
+                            <option>Tarjeta de Crédito</option>
+                            <option>Transferencia Bancaria</option>
+                            <option>Mercado Pago</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Seleccione un método de pago.
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="purchase-detail-section col-md-6">
+                <h2 class="mb-4">Detalle De La Compra:</h2>
+                <ul class="detail-item">
+                    <li>• Entradas Feria Córdoba: $ XXXXX</li>
+                    <li>• Unidades: 4</li>
+                </ul>
+                <div class="detail-total">
+                    Total: $ XXXXXX
+                </div>
+            </div>
+            <div class="d-flex justify-content-end">
+                <button type="button" class="btn btn-continue" id="continueMethodPaid" disabled>Continuar</button>
+            </div>
+        </section>
+
+        <section id="card-data" class="hidden row g-4 mb-4">
+            <h5>Información de pago:</h5>
+            <div class="user-data-section col-md-6">
+                <form class="was-validated">
+                    <div class="form-group-custom">
+                        <label for="validationInput" class="form-label">Número de tarjeta:</label>
+                        <input class="form-control" id="validationInput" placeholder="XXXX XXXX XXXX XXXX" required />
+                        <div class="invalid-feedback">
+                            Ingrese su nombre.
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group-custom col-md-6">
+                            <label for="validationInput" class="form-label">Fecha Venc:</label>
+                            <input class="form-control" id="validationInput" placeholder="MM/YYYY" required />
+                            <div class="invalid-feedback">
+                                Ingrese su nombre.
+                            </div>
+                        </div>
+                        <div class="form-group-custom col-md-6">
+                            <label for="validationInput" class="form-label">Código seguridad:</label>
+                            <input class="form-control" id="validationInput" placeholder="XXX" required />
+                            <div class="invalid-feedback">
+                                Ingrese su apellido.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group-custom">
+                        <label for="validationInput" class="form-label">Nombre completo:</label>
+                        <input class="form-control" id="validationInput" placeholder="example" required />
+                        <div class="invalid-feedback">
+                            Complete su dirección.
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group-custom col-md-6">
+                            <label for="validationInput">Cuotas</label>
+                            <select class="form-control payment-method-select" id="medioPago" required>
+                                <option value="">Seleccione cantidad de cuotas</option>
+                                <option>1 cuota</option>
+                                <option>3 cuotas s/interés</option>
+                                <option>6 cuotas s/interés</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Seleccione un método de pago.
+                            </div>
+                        </div>
+                        <div class="form-group-custom col-md-6">
+                            <label for="validationInput" class="form-label">N. Afiliado Club La Nación</label>
+                            <input class="form-control" id="validationInput" placeholder="example" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="purchase-detail-section col-md-6">
+                <h2 class="mb-4">Detalle De La Compra:</h2>
+                <ul class="detail-item">
+                    <li>• Entradas Feria Córdoba: $ XXXXX</li>
+                    <li>• Unidades: 4</li>
+                
+                </ul>
+                <div class="detail-total">
+                    Total: $ XXXXXX
+                </div>
+            </div>
+            <div class="d-flex justify-content-end">
+                <button type="button" class="btn btn-continue" id="" disabled>Pagar</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div>
+                <ul class="list-unstyled mb-0">
+                    <li>Cipolla Barbara</li>
+                    <li>Marturell Jean</li>
+                </ul>
+                <ul class="list-unstyled mb-0">
+                    <li>Rodriguez Mercedes</li>
+                    <li>Tola Jonathan</li>
+                </ul>
+            </div>
+            <div>
+                <div>
+                    <p class="mb-1">Trabajo grupal - Materia Diseño y Desarrollo Web (Curso 516035 - Grupo 7)</p>
+                </div>
+                <div>
+                    <a href="https://cuervojona.github.io/tp-g7-raices-sustentables/index.html">Sitio del Grupo</a>
+                </div>
+            </div>
+            <div class="align-content-center">
+                <img src="img/uade-logo.png" alt="uade-logo">
+            </div>
+        </div>
+    </footer>
+    <script src="js/pagos.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
