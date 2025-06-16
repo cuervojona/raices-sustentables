@@ -148,14 +148,14 @@ main {
 @media (max-width: 768px) {
     main {
         margin-bottom: 120px; /* More space for footer on mobile */
-        padding-bottom: 140px;
+        padding-bottom: 180px !important; /* Increase space for footer on mobile */
     }
 }
 
 @media (max-width: 480px) {
     main {
         margin-bottom: 140px; /* Even more space for very small screens */
-        padding-bottom: 160px;
+        padding-bottom: 140px !important; /* Even more space for very small screens */
     }
 }
 
@@ -189,6 +189,7 @@ footer {
     /* Altura fija para el footer */
     display: flex;
     align-items: center;
+    z-index: 1050;
 }
 
 .footer-content {
@@ -414,4 +415,9 @@ form .dark-mode button {
         width: 30px;
         height: 15px;
     }
+}
+
+main, .accordion, .accordion-item, .accordion-body {
+    z-index: 1;
+    position: relative;
 }
