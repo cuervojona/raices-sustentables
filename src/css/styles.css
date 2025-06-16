@@ -134,8 +134,29 @@ main {
     margin: var(--spacing-large) auto;
     padding: 2rem var(--spacing-medium);
     min-height: 60vh;
-    margin-bottom: calc(var(--spacing-large) + 80px);
+    margin-bottom: calc(var(--spacing-large) + 80px); /* Ensures content never goes under the fixed footer */
     margin-top: 100px;
+    padding-bottom: 120px; /* Ensures FAQ and all content are visible above the fixed footer */
+}
+
+@media (max-width: 992px) {
+    main {
+        margin-bottom: 100px; /* More space for footer on tablet */
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        margin-bottom: 120px; /* More space for footer on mobile */
+        padding-bottom: 140px;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        margin-bottom: 140px; /* Even more space for very small screens */
+        padding-bottom: 160px;
+    }
 }
 
 
