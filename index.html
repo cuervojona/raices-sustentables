@@ -8,8 +8,13 @@
     <title>Raices Sustentables</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+        <script src="js/script.js"></script>
+
+        <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/chatbot.css">
     <link rel="icon" href="img/icons8-árbol-48.png" />
 </head>
 
@@ -79,11 +84,11 @@
         <div class="container px-0">
         <section id="mision">
             <div class="row">
-            <p> Somos una feria itinerante que nace con el propósito de conectar comunidades a través de un consumo responsable, consciente y respetuoso con el medio ambiente. 
+            <p class="text-center"> Somos una feria itinerante que nace con el propósito de conectar comunidades a través de un consumo responsable, consciente y respetuoso con el medio ambiente. 
                 Nuestra misión es brindar un espacio donde productores, artesanos y emprendedores sustentables puedan ofrecer sus productos, compartir sus conocimientos y promover prácticas que cuiden el planeta. 
                 Queremos ser una raíz que crece en cada ciudad, sembrando conciencia ecológica y generando un cambio desde lo cotidiano.
             </p>
-            <img src="img/logo.png" alt="En construcción" class="logo-preliminar">
+            <img src="img/logo.png" alt="Raíces Sustentables logo" class="logo-preliminar" width="100" height="auto">
             </div>
         </section>
 
@@ -113,10 +118,43 @@
             </div>
         </div>
     </footer>
+    <!-- ChatBot -->
+<div id="chatbot-container">
+  <div id="chatbot-label">¿En qué puedo ayudarte?</div>
+  <button id="chatbot-button" class="btn btn-primary shadow" data-bs-toggle="modal" data-bs-target="#chatbotModal">
+    <i class="bi bi-chat-dots-fill"></i>
+  </button>
+</div>
+
+<!-- Modal del chatbot -->
+<div class="modal fade chatbot-modal" id="chatbotModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content shadow">
+      <div class="modal-header">
+        <h5 class="modal-title">Chat de ayuda</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <ul class="list-group">
+          <li class="list-group-item list-group-item-action" onclick="mostrarRespuesta('info')">
+            <i class="bi bi-info-circle-fill me-2"></i>Información general
+          </li>
+          <li class="list-group-item list-group-item-action" onclick="mostrarRespuesta('contacto')">
+            <i class="bi bi-envelope-fill me-2"></i>Contacto
+          </li>
+          <li class="list-group-item list-group-item-action" onclick="mostrarRespuesta('redes')">
+            <i class="bi bi-instagram me-2"></i>Redes sociales
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
     <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
         crossorigin="anonymous"></script>
-</body>
+
+    </body>
 
 </html>
