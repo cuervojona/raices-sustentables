@@ -1,6 +1,8 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    //Sección de pago
+    const pagarButton = document.getElementById('pagarButton');
     const entradasContainer = document.getElementById('tickets-section');
     const personalDataSection = document.getElementById('person-data');
     const cardDataSection = document.getElementById('card-data');
@@ -41,9 +43,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     continueBtn.addEventListener('click', () => {
-    
+
         entradasContainer.classList.add('hidden');
-    
+
         personalDataSection.classList.remove('hidden');
 
     });
@@ -56,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.querySelector('#person-data form');
 
     function checkFormValidity() {
-    
+
         continueMethodPaid.disabled = !form.checkValidity();
     }
 
@@ -67,13 +69,32 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     checkFormValidity();
-    
+
     continueMethodPaid.addEventListener('click', (e) => {
         e.preventDefault();
         entradasContainer.classList.add('hidden');
         personalDataSection.classList.add('hidden');
         cardDataSection.classList.remove('hidden');
     });
+
+    //Pagar
+    pagarButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        entradasContainer.classList.add('hidden');
+        personalDataSection.classList.add('hidden');
+        cardDataSection.classList.add('hidden');
+
+        const successMessage = document.createElement('div');
+        successMessage.className = 'alert alert-success';
+        successMessage.textContent = 'Pago realizado con éxito. ¡Gracias por tu compra!';
+        document.body.appendChild(successMessage);
+
+        setTimeout(() => {
+            successMessage.remove();
+            window.location.href = './../../tarjetas.html';
+        }, 3000);
+    });
+
 });
 
 function checkContinueButtonState() {
@@ -92,10 +113,10 @@ const dataUser = () => {
     const resumenEntradasUl = document.querySelector('.purchase-detail-section .detail-item');
     const totalElement = document.querySelector('.purchase-detail-section .detail-total');
 
-   
+
     const purchaseDetails = [
         { name: "Entradas Feria Córdoba", units: 4, price: 15000 },
-        
+
     ];
 
     let totalCompra = 0;
