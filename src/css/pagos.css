@@ -1,0 +1,218 @@
+.promo-banner {
+    background-color: #e8f5e9;
+    /* Light green background color for the banner */
+    color: #388e3c;
+    /* Dark green text color */
+    padding: 15px;
+    /* Inner spacing */
+    text-align: center;
+    /* Centered text */
+    font-weight: bold;
+    /* Bold text */
+}
+
+.input-group-quantity {
+
+    border-radius: 8px;
+    /* Rounded borders */
+    margin-bottom: 15px;
+    /* Bottom margin */
+    background-color: #f8f9fa;
+    /* Light gray background for the text part */
+    display: flex;
+    /* Use flexbox for layout */
+    align-items: center;
+    /* Align items vertically in the center */
+    padding: 0.75rem 1.25rem;
+    /* Adjust padding for the entire row */
+    justify-content: space-between;
+}
+
+.input-group-quantity .input-group-text {
+    background-color: #f8f9fa;
+    /* Light gray background */
+    border: none;
+    /* No border */
+    font-weight: 500;
+    /* Font weight */
+    color: #495057;
+    /* Dark text color */
+    flex-grow: 1;
+    /* Allow the text part to grow and take available space */
+    padding: 0.75rem 1.25rem;
+    /* Adjust padding */
+    display: flex;
+    align-items: center;
+}
+
+.input-group-quantity .btn-qty {
+    background-color: #f8f9fa;
+    /* Light gray background for buttons */
+    border: none;
+    /* No border */
+    color: #495057;
+    /* Dark text color */
+    font-weight: bold;
+    /* Bold text */
+    padding: 0.75rem 1rem;
+    /* Adjusted padding for buttons */
+    transition: background-color 0.2s ease;
+
+    /* flex-shrink: 0; */
+    /* Prevent buttons from shrinking */
+    width: 45px;
+    /* Fixed width for buttons */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-group-quantity .btn-qty:hover {
+    background-color: #e2e6ea;
+    /* Darker background on hover */
+}
+
+.input-group-quantity .form-control-qty {
+    text-align: center;
+    /* Centered text */
+    border: none;
+    /* No border */
+    width: 60px;
+    /* Fixed width for the quantity field */
+    background-color: white;
+    /* White background for the input */
+    font-weight: bold;
+    /* Bold text */
+    flex-shrink: 0;
+    /* Prevent input from shrinking */
+    padding: 0.75rem 0;
+    /* Adjusted padding */
+    border-left: 1px solid #dee2e6;
+    /* Separator line between buttons */
+    border-right: 1px solid #dee2e6;
+    /* Separator line between buttons */
+}
+
+/* Remove focus outlines */
+.form-control:focus,
+.btn:focus {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Styles for the "Continuar" button */
+.btn-continue {
+    background-color: #81c784;
+    /* Light green color */
+    color: white;
+    /* White text */
+    border: none;
+    /* No border */
+    padding: 12px 35px;
+    /* Inner spacing */
+    border-radius: 8px;
+    /* Rounded borders */
+    font-size: 1.1em;
+    /* Font size */
+    transition: background-color 0.2s ease;
+    /* Smooth transition on hover */
+}
+
+.btn-continue:hover {
+    background-color: #66bb6a;
+    /* Darker color on hover */
+    color: white;
+    /* Ensure text color is white on hover */
+}
+
+.hidden {
+    display: none !important;
+    /* Importante para asegurar que se oculte */
+}
+
+/* Sección de datos */
+/* Contenedor del formulario y detalle de compra */
+.person-data {
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    /* Permitir que las columnas se envuelvan en pantallas pequeñas */
+    gap: 30px;
+    /* Espacio entre las columnas */
+    flex-grow: 1;
+}
+
+.user-data-section {
+    flex: 1 1 45%;
+    /* Permite que crezca y ocupe casi la mitad del espacio */
+    min-width: 280px;
+    /* Ancho mínimo para evitar que se comprima demasiado */
+}
+
+.purchase-detail-section {
+    flex: 1 1 45%;
+    /* Permite que crezca y ocupe casi la mitad del espacio */
+    min-width: 280px;
+    /* Ancho mínimo */
+    background-color: #e8f5e9;
+    /* Fondo verde claro para el detalle */
+    border-radius: 8px;
+    padding: 20px;
+    color: #388e3c;
+    /* Color de texto verde oscuro */
+}
+
+.form-group-custom {
+    margin-bottom: 15px;
+}
+
+.form-group-custom label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group-custom .form-control {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    padding: 8px 12px;
+    width: 100%;
+    /* Asegurar que ocupe todo el ancho disponible */
+}
+
+.form-group-custom .form-control:focus {
+    border-color: #81c784;
+    box-shadow: 0 0 0 0.25rem rgba(129, 199, 132, 0.25);
+}
+
+.payment-method-select {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    padding: 8px 12px;
+    width: 100%;
+    background-color: white;
+}
+
+.payment-method-select:focus {
+    border-color: #81c784;
+    box-shadow: 0 0 0 0.25rem rgba(129, 199, 132, 0.25);
+}
+
+.detail-item {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.detail-item li {
+    margin-bottom: 5px;
+}
+
+.detail-total {
+    border-top: 1px dashed #388e3c;
+    /* Línea discontinua */
+    padding-top: 10px;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
