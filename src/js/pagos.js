@@ -114,7 +114,6 @@ const dataUser = () => {
         resumenEntradasUl.appendChild(liUnits);
     });
 
-    // Si no hay ítems seleccionados, mostrar un mensaje
     if (purchaseDetails.length === 0) {
         const liNoItems = document.createElement('li');
         liNoItems.textContent = 'No se han seleccionado entradas.';
