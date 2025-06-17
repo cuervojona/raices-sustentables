@@ -1,0 +1,121 @@
+ a {
+     color: #1b5e20;
+     text-decoration: none;
+ }
+
+ a:hover {
+     text-decoration: underline;
+ }
+
+ .integrantes {
+     background-color: rgba(0, 0, 0, 0.5);
+     backdrop-filter: blur(6px);
+     -webkit-backdrop-filter: blur(6px);
+     border-radius: 12px;
+     padding: 20px;
+     margin: 2rem;
+     color: white;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+ }
+
+ .logo-preliminar {
+     width: 400px;
+     height: auto;
+     display: block;
+     margin: 0 auto 20px;
+ }
+
+ #toggle-dark {
+     background-color: #b9f6ca;
+     color: #1b5e20;
+     border: none;
+     padding: 10px 20px;
+     border-radius: 5px;
+     cursor: pointer;
+     transition: background-color 0.3s, color 0.3s;
+ }
+
+ .nombre-integrante {
+     font-weight: bold;
+ }
+
+ #toggle-dark.dark-mode {
+     background-color: #222;
+     color: #b9f6ca;
+ }
+
+ section {
+     background-color: rgba(46, 125, 50, 0.08);
+     margin-bottom: 30px;
+     padding: 20px;
+     border-radius: 10px;
+     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+ }
+
+ /* Responsive Styles */
+ @media screen and (max-width: 768px) {
+     section.integrantes {
+         padding: 0 4px;
+         margin-top: 15px;
+     }
+
+     .integrantes {
+         margin: 1rem;
+         padding: 15px;
+     }
+
+     #toggle-dark {
+         padding: 8px 16px;
+         font-size: 14px;
+     }
+
+     .nombre-integrante {
+         font-size: 16px;
+     }
+
+     h1 {
+         font-size: 24px;
+     }
+
+     h2 {
+         font-size: 20px;
+     }
+
+     li {
+         margin: 8px 0;
+         font-size: 16px;
+     }
+
+
+     .logo-preliminar {
+         width: 300px;
+         height: auto;
+         display: block;
+         margin: 0 auto 20px;
+     }
+ }
+
+ @media screen and (max-width: 480px) {
+     section.integrantes {
+         padding: 10px 15px;
+         margin-top: 10px;
+     }
+
+     .integrantes {
+         margin: 0.5rem;
+         padding: 10px;
+     }
+
+     #toggle-dark {
+         padding: 6px 12px;
+         font-size: 13px;
+     }
+
+
+     .logo-preliminar {
+         width: 200px;
+         height: auto;
+         display: block;
+         margin: 0 auto 20px;
+     }
+ }
