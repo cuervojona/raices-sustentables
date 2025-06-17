@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
             body.classList.add('dark-mode');
             header.classList.add('dark-mode');
             footer.classList.add('dark-mode');
-            if (window.location.pathname === '/index.html') {
+            if (window.location.pathname === '/raices-sustentables/index.html' || window.location.pathname === '/raices-sustentables/') {
                 themeIcon.src = 'src/img/moon-stars-fill.svg';
             } else {
                 themeIcon.src = 'img/moon-stars-fill.svg';
