@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
             body.classList.remove('dark-mode');
             header.classList.remove('dark-mode');
             footer.classList.remove('dark-mode');
-            if (window.location.pathname === '/index.html') {
+            if (window.location.pathname === '/raices-sustentables/index.html') {
                 themeIcon.src = 'src/img/sun-fill.svg';
             } else {
                 themeIcon.src = 'img/sun-fill.svg';
